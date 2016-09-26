@@ -94,16 +94,16 @@ html, body, .wrapper,   {
     -moz-animation:    imageAnimation 21s linear infinite 0s;
 }
 .slideshow li:nth-child(1) span {
-    background-image: url(background.header.jpg)
+    background-image: url(images/background.header.jpg)
 }
 .slideshow li:nth-child(2) span {
-    background-image: url(pic2.png);
+    background-image: url(images/pic2.png);
     animation-delay: 7s;
     -webkit-animatio-delay: 7s;
     -moz-animation-delay: 7s;
 }
 .slideshow li:nth-child(3) span {
-    background-image: url(pic3.png);
+    background-image: url(images/pic3.png);
     animation-delay: 14s;
     -webkit-animatio-delay: 14s;
     -moz-animation-delay: 14s;
@@ -197,6 +197,13 @@ h2 {
    display: block;
     text-align: center;
     font: 1.5em Myriadpro, sans-serif;
+    transition: all 0.2s ease;
+    webkit-transition:  all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+.intro span:hover {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .font-awesome {
@@ -242,16 +249,7 @@ height: 3em;
     z-index: -1;
 
 }
-.pseudo {
-    display: inline-block;
-    position: relative;
-    height: 2em;
-    width: 2em;
-    bottom: 110px;
-    border-radius: 50%;
-    background-color:yellow;
-    z-index: 0;
-}
+
 
 .font-awesome:hover  i:first-child {
     color: rgba(20%, 29%, 36%, 0.8);
@@ -260,7 +258,7 @@ height: 3em;
 .font-awesome:hover i:first-child:after {
     border: none;
 }
-.font-awesome:hover ~i:nth-child(2) {
+.font-awesome:hover i:nth-child(2) {
     font-size: 1.5em;
     bottom: 1.3em;
 }
