@@ -1,9 +1,44 @@
-
+/*  To do:
+1. Portfolio: hover img for design;
+2. font-awesome for social links.
+*/
 @font-face {
-    font-family: Myriadpro;
-    src: url(myriadpro);
-    font-weight: ;
-    font-style: ;
+    font-family: 'Myriadpro';
+    src: url('font/MyriadPro/MyriadProRegular/MyriadProRegular.eot');                       /* IE9 Compat Modes */
+    src: /*url('font/MyriadPro/MyriadProRegular/.woff2') format('woff2'),     /* Super Modern Browsers */
+        url('font/MyriadPro/MyriadProRegular/MyriadProRegular.woff') format('woff'), /* Pretty Modern Browsers */
+        url('font/MyriadPro/MyriadProRegular/MyriadProRegular.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('font/MyriadPro/MyriadProRegular/MyriadProRegular.eot?#iefix') format('embedded-opentype'); /* IE6-IE8 */
+        /*url('font/MyriadPro/MyriadProRegular/.svg#svgFontName') format('svg');          /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Myriadpro';
+    src: url('font/MyriadPro/MyriadProBold/MyriadProBold.eot');
+    src: url('font/MyriadPro/MyriadProBold/MyriadProBold.woff') format('woff'),
+    url('font/MyriadPro/MyriadProBold/MyriadProBold.ttf') format('truetype'),
+    url('font/MyriadPro/MyriadProBold/MyriadProBold.eot?#iefix') format('embedded-opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Myriadpro';
+    src: url('font/MyriadPro/MyriadProItalic/MyriadProItalic.eot');
+    src: url('font/MyriadPro/MyriadProItalic/MyriadProItalic.woff') format('woff'),
+    url('font/MyriadPro/MyriadProItalic/MyriadProItalic.ttf') format('truetype'),
+    url('font/MyriadPro/MyriadProItalic/MyriadProItalic.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Myriadpro';
+    src: url('font/MyriadPro/MyriadProBoldItalic/MyriadProBoldItalic.eot');
+    src: url('font/MyriadPro/MyriadProBoldItalic/MyriadProBoldItalic.woff') format('woff'),
+    url('font/MyriadPro/MyriadProBoldItalic/MyriadProBoldItalic.ttf') format('truetype'),
+    url('font/MyriadPro/MyriadProBoldItalic/MyriadProBoldItalic.eot?#iefix') format('embedded-opentype');
+    font-weight: bold;
+    font-style: italic;
 }
 /*----------------------------------------------------------------------------------*/
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
@@ -46,22 +81,16 @@ blockquote:before, blockquote:after, q:before, q:after {
 blockquote, q {
     quotes: "" "";
 }
-
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
-
 .wrapper {
     overflow: hidden;
-       }
-
-
-
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------HEADER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-html, body, .wrapper,   {
+html, body  {
     height: 100%;
 }
 .hero {
@@ -71,11 +100,8 @@ html, body, .wrapper,   {
     height: 100vh;
     box-sizing: border-box;
     padding-bottom: 105px;
-
-
 }
 .slideshow {
-
 }
 .slideshow li span {
     width: 100%;
@@ -148,9 +174,6 @@ html, body, .wrapper,   {
     50% { opacity: 0;
         transform: scale(1.1) rotate(2deg);}
     100% { opacity: 0 }}
-
-
-
 header {
     position: fixed;
     height: 90px;
@@ -160,9 +183,7 @@ header {
     background: rgb(20%, 29%, 36%);
     background: rgba(20%, 29%, 36%, 0.4);
     z-index: 10;
-
 }
-
 header .logo {
     float: left;
     }
@@ -171,9 +192,7 @@ header .logo {
     height: 50vh;
     text-align: center;
     z-index: 1;
-
 }
-
 h2 {
     clear:both;
     margin-top: 30vh;
@@ -183,16 +202,15 @@ h2 {
     display: block;
     font: bold 2.3em Myriadpro, sans-serif;
 }
-.intro h2+a {
+.arrow-down {
     display: inline-block;
     width: 100vw;
     margin-top: 17vh;
     text-align: center;
    }
-.intro h2+a:hover {
+.arrow-down:hover {
     text-decoration: none;
 }
-
 .intro span {
    display: block;
     text-align: center;
@@ -202,22 +220,20 @@ h2 {
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
 }
-.intro span:hover {
-    color: rgba(255, 255, 255, 0.7);
+.arrow-down:hover span {
+    color: rgba(255, 255, 255, 0.55);
 }
-
 .font-awesome {
-
-height: 3em;
-
+    height: 3em;
 }
 .intro i:first-child {
     position: relative;
+    z-index: 1;
+    bottom: 10px;
+    margin: 12px 0;
     font-size: 2.3em;
     text-align: center;
-
     color:#2ecc71;
-    z-index: 1;
     transition: all 0.3s ease;
     webkit-transition:  all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -225,45 +241,40 @@ height: 3em;
 }
 .intro i:nth-child(2) {
     position: relative;
-    bottom: 1.8em;
+    z-index: 1;
+    bottom: 75px;
     color:rgba(255, 255, 255, 0.8);
     line-height: 0;
     font-size: 1em;
     text-align: center;
-
-    z-index: 1;
     transition: all 0.3s ease;
     webkit-transition:  all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
 }
-.intro i:first-child:after {
+.arrow-down:after {
     content: "";
     position: absolute;
-    bottom: 0.5em;
+    bottom: -0.7em;
     left: 0;
     right: 0;
-
-
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     z-index: -1;
-
 }
-
-
-.font-awesome:hover  i:first-child {
-    color: rgba(20%, 29%, 36%, 0.8);
+.arrow-down:hover  i:first-child {
+    margin: 0px;
+    color: rgba(20%, 29%, 36%, 0.9);
     font-size: 3em;
 }
-.font-awesome:hover i:first-child:after {
-    border: none;
-}
-.font-awesome:hover i:nth-child(2) {
+.arrow-down:hover i:nth-child(2) {
     font-size: 1.5em;
-    bottom: 1.3em;
+    bottom: 73px;
+}
+.arrow-down:hover:after{
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-/*----------------------------------------------------------------------------------*/
+    /*----------------------------------------------------------------------------------*/
 /*-------------------------------------NAV------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 
@@ -295,10 +306,7 @@ h3 {
 h4 {
     margin-top: 30px;  /*-??-*/
     font: bold 26px Myriadpro, sans-serif;
-
 }
-
-
 .about {
     overflow: hidden;
     padding: 120px 0px 105px;
@@ -309,11 +317,8 @@ h4 {
     margin: 0 auto;
     line-height: 1.5;
 }
-
 .about p {
     margin-top: 60px;
-
-
 }
 .about ul {
     margin: 130px auto 0px;
@@ -323,7 +328,6 @@ h4 {
     display: inline-block;
     width: 230px;
     padding: 0px 60px;
-
 }
 .about h4+p {
     FONT:20px Myriadpro, sans-serif; /*or p.smaller in html??-*/
@@ -343,7 +347,6 @@ h4 {
     margin-top: 60px;
     text-align: center;
 }
-
 .portfolioFilter a, .portfolioFilter a:LINK, .portfolioFilter a:VISITED {
     display: inline-block;
     margin: 0px 10px;
@@ -360,7 +363,6 @@ h4 {
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
 }
-
 .portfolioFilter a:HOVER {
 
     top: 0px;
@@ -372,9 +374,7 @@ h4 {
        color: #fff;
        text-decoration: none;
        background:  #2DCB71;
-
     }
-
 .portfolioContainer {
     margin-top: 85px;
     left: 55vw;
@@ -383,7 +383,6 @@ h4 {
     -ms-transform: translateX(-50%);
     font-size: 0;
     text-align: center;
-
 }
 .portfolioContainer div {
     display: inline-block;
@@ -395,19 +394,15 @@ h4 {
     margin: 25px;
     font-size: 0;
     border: 1px solid #e9e9e9;
-
-
 }
 .portfolioContainer div img {
     overflow: hidden;
     width: 330px;
     height: 244px;
-
     webkit-transition:  width 0.2s, height 0.2s linear;
     -moz-transition: width 0.2s, height 0.2s linear;
     -o-transition: width 0.2s, height 0.2s linear;
     transition: width 0.2s, height 0.2s linear;
-
  }
  .portfolioContainer div:hover {
      width: 343px;
@@ -423,17 +418,12 @@ h4 {
     webkit-transition:  border 0.4s;
     -moz-transition: border 0.4s;
     -o-transition: border 0.4;
-
 }
  .portfolioContainer div img:hover {
      overflow: hidden;
      width: 343px;
      height: 257px;
-
  }
-
-
-
 .team {
      overflow: hidden;
      padding: 150px 0px 100px;
@@ -447,13 +437,11 @@ h4 {
      display: inline-block;
      width: 300px;
      margin: 35px 45px 0px;
-
  }
  .team ul li>img {
      overflow: hidden;
      box-sizing: border-box;
      border: 5px solid #ffffff;
-
      box-shadow: 0px 0px 43px 67px #ffffff inset;
      border-radius: 50%;
      -moz-border-radius: 50%;
@@ -500,14 +488,11 @@ h4 {
     text-align: center;
 }
 .contact form {
-
     display: inline-block;
-
     width: 370px;
 }
 .contact li {
 }
-
 .contact input {
     margin-bottom: 50px;
     width: 370px;
@@ -521,12 +506,10 @@ h4 {
 ::-moz-placeholder          {font: 26px Myriadpro, sans-serif; color: #2C3D4F}/* Firefox 19+ */
 :-moz-placeholder           {font: 26px Myriadpro, sans-serif; color: #2C3D4F}/* Firefox 18- */
 :-ms-input-placeholder      {font: 26px Myriadpro, sans-serif; color: #2C3D4F}
-
 :focus::-webkit-input-placeholder {color: transparent}
 :focus::-moz-placeholder          {color: transparent}
 :focus:-moz-placeholder           {color: transparent}
 :focus:-ms-input-placeholder      {color: transparent}
-
 .contact textarea {
     margin-top: 10px;
     width: 370px;
@@ -538,8 +521,6 @@ h4 {
     border-bottom: 2px solid #2DCB71;
     resize: none;
 }
-
-
 .contact button[type="submit"] {
     margin-top: 40px;
     width: 130px;
@@ -560,7 +541,6 @@ h4 {
 .contact button[type="submit"]:hover {
     background: rgba(18%, 35%, 40%, 0.7)
 }
-
 .contact aside {
     display: inline-block;
     vertical-align: top;
@@ -601,7 +581,7 @@ footer {
 }
 @media all and (max-width: 1150px) and (min-width: 825px)
 {
-    footer {padding: 70px 20px;}
+footer {padding: 70px 20px;}
 }
 footer .logo {
     display: block;
